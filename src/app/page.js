@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
   const [resultado, setResultado] = useState(null);
   const [carregando, setCarregando] = useState(false);
   const [erro, setErro] = useState('');
+  const fileInputRef = useRef(null);
 
   const handleSelecionarArquivo = (event) => {
     setArquivo(event.target.files[0]);
@@ -20,6 +21,9 @@ export default function Home() {
     setResultado(null);
     setCarregando(false);
     setErro('');
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
   };
 
   const handleProcessar = async () => {
@@ -62,7 +66,7 @@ export default function Home() {
         </p>
         <div className={styles.inputWrapper}>
           <input
-            key={arquivo ? 'selecionado' : 'vazio'}
+            ref={fileInputRef}
             type="file"
             accept=".xlsx, .csv"
             onChange={handleSelecionarArquivo}
