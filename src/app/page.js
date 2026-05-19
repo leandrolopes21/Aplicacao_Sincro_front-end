@@ -70,7 +70,7 @@ export default function Home() {
         </div>
         <button
           onClick={handleProcessar}
-          disabled={carregando}
+          disabled={carregando || !!arquivo}
           className={styles.button}
         >
           {carregando ? 'Lendo dados...' : 'Calcular Taxas'}
