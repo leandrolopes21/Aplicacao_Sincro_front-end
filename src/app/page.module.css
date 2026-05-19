@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -218,4 +219,11 @@
   list-style-type: none;
   padding: 0 12px;
   margin: 0;
+}
+
+.footer {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 0.8;
 }

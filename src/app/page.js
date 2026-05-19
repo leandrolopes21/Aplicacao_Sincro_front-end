@@ -117,6 +117,9 @@ export default function Home() {
           </div>
         )}
       </div>
+      <footer className={styles.footer}>
+        <p>&copy; Leandro Lopes 2026</p>
+      </footer>
     </main>
   );
 }
