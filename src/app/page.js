@@ -15,11 +15,11 @@ export default function Home() {
     setErro('');
   };
 
-  const handleAbrirPdf = () => {
-    if (arquivo) {
-      const url = URL.createObjectURL(arquivo);
-      window.open(url, '_blank');
-    }
+  const handleLimpar = () => {
+    setArquivo(null);
+    setResultado(null);
+    setCarregando(false);
+    setErro('');
   };
 
   const handleProcessar = async () => {
@@ -75,14 +75,14 @@ export default function Home() {
         >
           {carregando ? 'Lendo dados...' : 'Calcular Taxas'}
         </button>
-        {/* {arquivo && (
+        {(arquivo || resultado) && (
           <button
-            onClick={handleAbrirPdf}
+            onClick={handleLimpar}
             className={styles.button}
           >
-            Visualizar excel
+            Limpar / Nova Consulta
           </button>
-        )} */}
+        )}
         {erro && <p className={styles.error}>{erro}</p>}
         {resultado && (
           <div className={styles.resultado}>
