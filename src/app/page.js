@@ -62,7 +62,7 @@ export default function Home() {
         </p>
         <div className={styles.inputWrapper}>
           <input
-            key={arquivo ? 'cheio' : 'vazio'}
+            key={arquivo ? 'selecionado' : 'vazio'}
             type="file"
             accept=".xlsx, .csv"
             onChange={handleSelecionarArquivo}
