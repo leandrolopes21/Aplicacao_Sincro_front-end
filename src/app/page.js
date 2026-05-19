@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <main className={styles.container}>
       <div className={styles.card}>
-        <h1 className={styles.title}>Leitor Extrato excel Asaas</h1>
+        <h1 className={styles.title}>Leitor Extrato Excel Asaas</h1>
         <p className={styles.description}>
           Selecione o seu extrato em excel para calcular o total de tarifas de forma automática.
         </p>
