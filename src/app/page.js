@@ -35,7 +35,7 @@ export default function Home() {
     formData.append('arquivoExtrato', arquivo);
 
     try {
-      const response = await fetch('https://aplicacao-sincro-back-end-1.onrender.com', {
+      const response = await fetch('https://aplicacao-sincro-back-end-1.onrender.com/api/taxas', {
         method: 'POST',
         body: formData,
       });
