@@ -73,16 +73,16 @@ export default function Home() {
           disabled={carregando}
           className={styles.button}
         >
-          {carregando ? 'Lendo o PDF...' : 'Calcular Taxas'}
+          {carregando ? 'Lendo dados...' : 'Calcular Taxas'}
         </button>
-        {arquivo && (
+        {/* {arquivo && (
           <button
             onClick={handleAbrirPdf}
             className={styles.button}
           >
             Visualizar excel
           </button>
-        )}
+        )} */}
         {erro && <p className={styles.error}>{erro}</p>}
         {resultado && (
           <div className={styles.resultado}>
