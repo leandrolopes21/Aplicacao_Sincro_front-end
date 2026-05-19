@@ -119,9 +119,8 @@ export default function Home() {
             </div>
           )}
         </div>
+        <footer>&copy; Leandro Lopes 2026</footer>
       </main>
-
-      <footer>&copy; Leandro Lopes 2026</footer>
     </div>
   );
 }
