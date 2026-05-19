@@ -1,0 +1,221 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #008483;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1b;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 14px;
+  color: #5f6368;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.inputWrapper {
+  margin-bottom: 24px;
+}
+
+.fileInput {
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #dadce0;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.fileInput:hover {
+  border-color: #0070f3;
+}
+
+.button {
+  width: 100%;
+  padding: 14px;
+  margin: 5px;
+  background-color: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.button:disabled {
+  background-color: #e8eaed;
+  color: #9aa0a6;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 20px;
+  color: #d93025;
+  font-size: 14px;
+  background-color: #fce8e6;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.resultado {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #e8eaed;
+  text-align: left;
+}
+
+.resultado h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #1a1a1b;
+}
+
+.resultado p {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #3c4043;
+}
+
+.total {
+  font-size: 20px !important;
+  font-weight: 700;
+  color: #0070f3 !important;
+  margin-top: 12px;
+}
+
+/* Atualize as classes abaixo no final do seu CSS */
+
+.detalhes {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px dashed #e8eaed;
+}
+
+.detalhes h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #1a1a1b;
+  text-align: left;
+}
+
+/* O Segredo 1: Tamanho fixo com Scroll na lista! */
+.listaDatas {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 250px; 
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Deixando a barra de rolagem invisível e moderna */
+.listaDatas::-webkit-scrollbar {
+  width: 6px;
+}
+.listaDatas::-webkit-scrollbar-track {
+  background: #f1f3f4;
+  border-radius: 4px;
+}
+.listaDatas::-webkit-scrollbar-thumb {
+  background: #c0c4c9;
+  border-radius: 4px;
+}
+
+/* O Segredo 2: Flexbox perfeito para não quebrar a linha */
+.itemData {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f3f4;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.itemData:last-child {
+  border-bottom: none;
+}
+
+.itemCliente {
+  text-align: left;
+  padding-right: 15px;
+  color: #3c4043;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adiciona os "..." se o nome for grande */
+  flex: 1; /* Ocupa todo o espaço livre do centro */
+}
+
+.itemCliente strong {
+  color: #1a1a1b;
+  margin-right: 4px;
+}
+
+.itemValor {
+  white-space: nowrap;
+  font-weight: 600;
+  color: #d93025; /* Coloquei vermelho para indicar que é uma taxa/saída! */
+  flex-shrink: 0; /* Impede que o valor seja esmagado pelo texto */
+}
+
+/* Mantenha todas as classes anteriores do seu CSS e adicione estas no final: */
+
+.grupoDia {
+  margin-bottom: 16px;
+  border: 1px solid #e8eaed;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.grupoDia:last-child {
+  margin-bottom: 0;
+}
+
+.headerDia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #1a1a1b;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.totalDia {
+  font-weight: 700;
+  color: #0070f3;
+}
+
+.listaClientesSub {
+  list-style-type: none;
+  padding: 0 12px;
+  margin: 0;
+}
